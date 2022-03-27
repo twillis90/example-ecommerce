@@ -2,6 +2,8 @@ package com.commerce.example.models;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 
 @Entity
@@ -20,7 +22,7 @@ public class Product {
 //    protected ProductReview productReview;
 
     @ManyToMany
-    protected Collection<ProductIdentifier>[] productIdentifiers;
+    protected Collection<ProductIdentifier> productIdentifiers;
 
     public Product(){
 
@@ -32,7 +34,7 @@ public class Product {
         this.productPrice = productPrice;
         this.productRating = productRating;
 //        this.productReview = productReview;
-        this.productIdentifiers = (Collection<ProductIdentifier>[]) productIdentifiers;
+        this.productIdentifiers = new ArrayList<>(Arrays.asList(productIdentifiers));
     }
 
     public Long getId() {
@@ -59,7 +61,8 @@ public class Product {
 //        return productReview;
 //    }
 
-    public Collection<ProductIdentifier>[] getProductIdentifiers() {
+
+    public Collection<ProductIdentifier> getProductIdentifiers() {
         return productIdentifiers;
     }
 }
