@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    background-color: rgb(194, 183, 183);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 20px solid #01CDFE;
+    border-left: 20px solid #01CDFE;
+    padding: 2rem;
+    padding-right: 5rem;
+    margin: 3%;
+    justify-content: space-between;
+
+}
+
+#headerLogo{
+    max-width: 150px;
+}
+
+
+#search{
+    justify-content: flex-end;
+    align-content: flex-end;
+    padding-top: 10rem;
+}
